@@ -65,6 +65,7 @@ const experienceItems: ExperienceItem[] = [
       {name:'Capcut',slug:'capcut'},
       {name:'Picsart',slug:'picsart'},
       { name: 'Canva', slug: 'canva' },
+      { name: 'Photoshop', slug: 'photoshop' },
       { name: 'Illustrator', slug: 'illustrator' },
 
     ],
