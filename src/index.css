@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #FAF7F2;
+  --gold: #C9A84C;
+}
+
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #1C1C1E;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: #111112;
+  color: #FAF7F2;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FAF7F2; }
+::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 3px; }
+
+.dark ::-webkit-scrollbar-track { background: #111112; }
+
+/* Gold underline utility */
+.gold-underline {
+  text-decoration: underline;
+  text-decoration-color: #C9A84C;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+}
+@font-face {
+  font-family: "Alexana";
+  src: url(/src/Font/Alexana.ttf)format(truetype);
+}
+
+/* Section fade-in on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* PrimeReact Tag override */
+.p-tag {
+  font-family: 'Nunito', sans-serif !important;
+}
+
+/* Chip style override */
+.p-chip {
+  background: #F2EDE4 !important;
+  color: #6B5B47 !important;
+  border: 1px solid #E0D8CE !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 0.82rem !important;
+}
+
+.p-chip .p-chip-text {
+  font-size: 0.82rem !important;
+}
+
+.dark .p-chip {
+  background: #2D2D2F !important;
+  color: #E6DDD1 !important;
+  border-color: #4A4640 !important;
+}
+
+.shiny-text {
+  color: #ffffff3a; /* Adjust this color to change intensity/style */
+  background: linear-gradient(
+    145deg,
+    #C9A84C 40%,
+    #F2EDE4  55%,
+    #C9A84C 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
