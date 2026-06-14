@@ -8,6 +8,7 @@
 }
 
 * {
+  box-sizing: border-box;
   transition-property: background-color, border-color, color, fill, stroke;
   transition-duration: 200ms;
   transition-timing-function: ease;
@@ -15,9 +16,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  min-width: 320px;
+  overflow-x: hidden;
   background-color: #FAF7F2;
   color: #1C1C1E;
   font-family: 'Nunito', sans-serif;

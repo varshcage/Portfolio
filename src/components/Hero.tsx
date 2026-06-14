@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center pt-24 pb-16 px-6 relative overflow-hidden bg-cream dark:bg-[#111112]"
+      className="relative flex min-h-screen items-center overflow-hidden bg-cream px-4 pb-16 pt-24 dark:bg-[#111112] sm:px-6"
     >
       {/* Animated SVG Background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
@@ -110,7 +110,7 @@ export default function Hero() {
           backgroundSize: '32px 32px',
         }} />
 
-      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-25 items-center relative z-10">
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
         {/* Left */}
         <div className="animate-fade-up">
           <div className="flex items-center gap-3 mb-6">
@@ -119,12 +119,12 @@ export default function Hero() {
             <span className="text-gold text-xs font-mono tracking-widest uppercase">Available for Work</span>
           </div>
 
-          <h1 className="font-alexana text-5xl md:text-6xl lg:text-5xl font-bold text-charcoal leading-[1.05] mb-6 dark:text-cream">
+          <h1 className="mb-6 font-alexana text-4xl font-bold leading-[1.05] text-charcoal dark:text-cream sm:text-5xl md:text-6xl lg:text-5xl">
             Srishanker<br />
             <span className="italic text-gold shiny-text">Heshavarshaan</span>
           </h1>
 
-          <p className="text-warm text-lg leading-relaxed mb-8 max-w-md font-body dark:text-cream/70">
+          <p className="mb-8 max-w-md font-body text-base leading-relaxed text-warm dark:text-cream/70 sm:text-lg">
             Front-End Developer &amp; Graphic Designer crafting elegant digital experiences — from intuitive interfaces to robust backends.
           </p>
 
@@ -139,16 +139,16 @@ export default function Hero() {
             ))}
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-3 sm:gap-4">
             <a
               href="#projects"
-              className="bg-charcoal text-cream px-7 py-3.5 rounded-full font-medium text-sm hover:bg-gold hover:text-charcoal transition-all duration-200 inline-flex items-center gap-2 dark:bg-cream dark:text-charcoal dark:hover:bg-gold"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-sm font-medium text-cream transition-all duration-200 hover:bg-gold hover:text-charcoal dark:bg-cream dark:text-charcoal dark:hover:bg-gold sm:w-auto sm:px-7"
             >
               View Projects <i className="pi pi-arrow-right text-xs" />
             </a>
             <a
               href="#contact"
-              className="border border-charcoal text-charcoal px-7 py-3.5 rounded-full font-medium text-sm hover:border-gold hover:text-gold transition-all duration-200 dark:border-cream/40 dark:text-cream dark:hover:border-gold dark:hover:text-gold"
+              className="inline-flex w-full items-center justify-center rounded-full border border-charcoal px-6 py-3.5 text-sm font-medium text-charcoal transition-all duration-200 hover:border-gold hover:text-gold dark:border-cream/40 dark:text-cream dark:hover:border-gold dark:hover:text-gold sm:w-auto sm:px-7"
             >
               Let's Talk
             </a>
@@ -157,18 +157,18 @@ export default function Hero() {
 
         {/* Right — Stats card */}
         <div className="animate-fade-up" style={{ animationDelay: '0.15s' }}>
-          <div className="bg-white rounded-3xl p-8 shadow-sm border border-border-warm relative dark:bg-charcoal-light dark:border-white/10">
+          <div className="relative rounded-3xl border border-border-warm bg-white p-5 shadow-sm dark:border-white/10 dark:bg-charcoal-light sm:p-8">
             {/* Decorative top accent */}
             <div className="absolute top-0 left-8 right-8 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent rounded-full" />
 
-            <div className="grid grid-cols-2 gap-6 mb-8">
+            <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               {[
                 { num: '7+', label: 'Projects Built' },
                 { num: '2+', label: 'Years Coding' },
                 { num: '3', label: 'Languages Spoken' },
                 { num: '1', label: 'Year Work Exp.' },
               ].map((s) => (
-                <div key={s.label} className="text-center p-4 rounded-2xl bg-cream-dark dark:bg-white/5">
+                <div key={s.label} className="rounded-2xl bg-cream-dark p-4 text-center dark:bg-white/5">
                   <div className="font-display text-3xl font-bold text-gold mb-1">{s.num}</div>
                   <div className="text-xs text-muted uppercase tracking-wider font-body dark:text-cream/50">{s.label}</div>
                 </div>

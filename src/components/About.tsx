@@ -14,7 +14,7 @@ export default function About() {
   const ref = useReveal()
 
   return (
-    <section id="about" className="py-28 px-6 bg-white relative overflow-hidden dark:bg-charcoal">
+    <section id="about" className="relative overflow-hidden bg-white px-4 py-28 dark:bg-charcoal sm:px-6">
       {/* Animated SVG Background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         <svg 
@@ -109,11 +109,11 @@ export default function About() {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10" ref={ref}>
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid items-start gap-10 md:grid-cols-2 md:gap-16">
           {/* Left */}
           <div className="reveal">
             <span className="text-gold text-xs font-mono tracking-widest uppercase">01 — About</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mt-3 mb-6 leading-tight dark:text-cream">
+            <h2 className="mt-3 mb-6 font-display text-3xl font-bold leading-tight text-charcoal dark:text-cream sm:text-4xl md:text-5xl">
               Developer by logic,<br />
               <span className="italic">Designer by heart.</span>
             </h2>

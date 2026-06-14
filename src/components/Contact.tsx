@@ -11,7 +11,7 @@ export default function Contact() {
   const ref = useReveal()
 
   return (
-    <section id="contact" className="py-28 px-6 bg-charcoal dark:bg-black">
+    <section id="contact" className="bg-charcoal px-4 py-28 dark:bg-black sm:px-6">
       <div className="max-w-4xl mx-auto" ref={ref}>
         {/* Header */}
         <div className="text-center mb-16 reveal">

@@ -103,7 +103,7 @@ export default function Skills() {
   const ref = useReveal()
 
   return (
-    <section id="skills" className="bg-cream px-6 py-28 dark:bg-[#111112]">
+    <section id="skills" className="bg-cream px-4 py-28 dark:bg-[#111112] sm:px-6">
       <div className="mx-auto max-w-6xl" ref={ref}>
         <div className="reveal mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">

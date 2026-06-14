@@ -148,7 +148,7 @@ export default function Projects() {
   const projectCount = projects.length
 
   return (
-    <section id="projects" className="bg-white px-6 py-28 dark:bg-charcoal">
+    <section id="projects" className="bg-white px-4 py-28 dark:bg-charcoal sm:px-6">
       <div className="mx-auto max-w-6xl" ref={ref}>
         <div className="reveal mb-14 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">

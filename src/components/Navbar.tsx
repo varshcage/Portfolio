@@ -31,9 +31,12 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
         {/* Logo */}
-        <a href="#" className="font-display text-xl font-semibold text-charcoal tracking-wide dark:text-cream">
+        <a
+          href="#"
+          className="max-w-[180px] font-display text-lg font-semibold leading-tight tracking-wide text-charcoal dark:text-cream sm:max-w-none sm:text-xl"
+        >
           Srishanker<span className="text-gold">.</span>Heshavarshaan
         </a>
 
@@ -91,23 +94,25 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-cream border-t border-border-warm px-6 py-4 flex flex-col gap-4 dark:bg-charcoal dark:border-white/10">
-          {links.map((l) => (
+        <div className="md:hidden border-t border-border-warm bg-cream px-4 py-4 dark:border-white/10 dark:bg-charcoal sm:px-6">
+          <div className="mx-auto flex max-w-6xl flex-col gap-4">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setMenuOpen(false)}
+                className="py-1 text-sm font-medium text-warm dark:text-cream/70"
+              >
+                {l.label}
+              </a>
+            ))}
             <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setMenuOpen(false)}
-              className="text-warm font-medium text-sm py-1 dark:text-cream/70"
+              href="mailto:heshavarshan@gmail.com"
+              className="mt-2 rounded-full bg-charcoal py-2.5 text-center text-sm font-medium text-cream dark:bg-cream dark:text-charcoal"
             >
-              {l.label}
+              Hire Me
             </a>
-          ))}
-          <a
-            href="mailto:heshavarshan@gmail.com"
-            className="bg-charcoal text-cream text-center py-2.5 rounded-full text-sm font-medium mt-2 dark:bg-cream dark:text-charcoal"
-          >
-            Hire Me
-          </a>
+          </div>
         </div>
       )}
     </nav>
